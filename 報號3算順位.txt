@@ -1,0 +1,19 @@
+n = int(input("輸入人數: "))
+game = []
+for i in range(n):
+  game.append(i + 1)
+sign = 0
+order = 0
+out_player = 0
+while out_player < n - 1:
+  if game[order] != 0:
+    sign += 1
+  if sign == 3:
+    game[order] = 0
+    out_player += 1
+    sign = 0
+  order += 1
+  if order == n: order = 0
+for i in range(n):
+  if game[i] != 0:
+    print("第幾順位 : "+ str(i + 1))

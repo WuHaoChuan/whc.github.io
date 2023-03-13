@@ -1,0 +1,13 @@
+def triangle1(num):
+    star = 1
+    for i in range(num):
+        if i == 0:
+            star_ = format("*"*star,"^"+str(num*2-1))
+        else:
+            star_ = format("*"+" "*(star-2)+"*","^"+str(num*2-1))
+        if i == num-1:
+                star_ = format("* "*(star-2))
+        star += 2
+        print(star_)
+
+triangle1(3)
